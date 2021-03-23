@@ -25,6 +25,11 @@ Route::prefix('category')
     ->middleware('auth')
     ->group(function(){
         Route::get('/', [CategoryController::class, 'index'])->name('cate.index');
+        Route::get('/add', [CategoryController::class, 'add'])->name('cate.add');
+        Route::post('/add', [CategoryController::class, 'saveAdd']);
+        Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('cate.edit');
+        Route::post('/edit/{id}', [CategoryController::class, 'saveEdit']);
+        Route::get('/{id}/delete', [CategoryController::class, 'delete'])->name('cate.delete');
 });
 
 Route::prefix('brand')
@@ -42,4 +47,9 @@ Route::prefix('product')
     ->middleware('auth')
     ->group(function(){
         Route::get('/', [ProductController::class, 'index'])->name('pro.index');
+        Route::get('/add', [Controller::class, 'add'])->name('pro.add');
+        Route::post('/add', [Controller::class, 'saveAdd']);
+        Route::get('/edit/{id}', [Controller::class, 'edit'])->name('pro.edit');
+        Route::post('/edit/{id}', [Controller::class, 'saveEdit']);
+        Route::get('/{id}/delete', [Controller::class, 'delete'])->name('pro.delete');
 });

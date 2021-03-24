@@ -47,9 +47,9 @@ Route::prefix('product')
     ->middleware('auth')
     ->group(function(){
         Route::get('/', [ProductController::class, 'index'])->name('pro.index');
-        Route::get('/add', [Controller::class, 'add'])->name('pro.add');
-        Route::post('/add', [Controller::class, 'saveAdd']);
-        Route::get('/edit/{id}', [Controller::class, 'edit'])->name('pro.edit');
-        Route::post('/edit/{id}', [Controller::class, 'saveEdit']);
-        Route::get('/{id}/delete', [Controller::class, 'delete'])->name('pro.delete');
+        Route::get('/add', [ProductController::class, 'add'])->name('pro.add');
+        Route::post('/add', [ProductController::class, 'saveAdd']);
+        Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('pro.edit');
+        Route::post('/edit/{id}', [ProductController::class, 'saveEdit']);
+        Route::get('/{id}/delete', [ProductController::class, 'delete'])->name('pro.delete');
 });

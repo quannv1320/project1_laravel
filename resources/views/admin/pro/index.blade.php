@@ -33,8 +33,10 @@
                             <td>
                                 <img src="{{ asset($item->image) }}" width="100" alt="image_err">
                             </td>
-                            <td>{{ $item->cate_id }}</td>
-                            <td>{{ $item->brand_id }}</td>
+                            <td>{{ $item->category->name }}</td>
+                            <td>{{ $item->brand->name }}
+                                <img src="{{ asset($item->brand->logo) }}" width="70">
+                            </td>
                             <td>{{ $item->price }}</td>
                             <td>{{ $item->quantity }}</td>
                             <td>

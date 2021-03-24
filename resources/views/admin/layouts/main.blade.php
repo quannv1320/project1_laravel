@@ -370,7 +370,11 @@
         </div>
     </div>
 
-   @include('admin.layouts.script')
+    
+    <script src="/path-to-your-tinymce/tinymce.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/48xa0hxd3011nbpxpx1784jn23e1726gwfbnu92cgevevt2b/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    @yield('page-script')
+    @include('admin.layouts.script')
 </body>
 
 </html>

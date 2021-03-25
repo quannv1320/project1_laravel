@@ -11,5 +11,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 
 
 Route::get('/', function () {
-    return view('clients.index');
-});
+    return view('clients.homepage');
+})->name('homepage');
+
+Route::view('product-detail', 'clients.product-detail')->name('product-detail');

@@ -20,7 +20,7 @@
                     <div class="col-3">
                         <!-- Logo Header -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="{{ asset('clients/assets/images/logo/logo.png') }}" alt=""></a>
+                            <a href="{{ route('homepage') }}"><img src="{{ asset('clients/assets/images/logo/logo.png') }}" alt=""></a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -69,7 +69,7 @@
                                         <a href="{{ route('homepage') }}">Trang chủ</a>
                                     </li>
                                     <li class="has-dropdown has-megaitem">
-                                        <a href="{{ route('shop') }}">Sản phẩm <i class="fa fa-angle-down"></i></a>
+                                        <a href="{{ route('shop') }}">Cửa hàng <i class="fa fa-angle-down"></i></a>
                                         <!-- Mega Menu -->
                                         <div class="mega-menu">
                                             <ul class="mega-menu-inner">
@@ -131,18 +131,20 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="has-dropdown">
-                                        <a href="#">Chính sách <i class="fa fa-angle-down"></i></a>
-                                        <!-- Sub Menu -->
-                                        <ul class="sub-menu">
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="faq.html">Frequently Questions</a></li>
-                                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
-                                        </ul>
+                                    <li>
+                                        <a href="">Vợt cầu lông</a>
                                     </li>
                                     <li>
-                                        <a href="about-us.html">Tin tức</a>
+                                        <a href="">Quần áo</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Giày</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Phụ kiện</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html">Chia sẻ</a>
                                     </li>
                                     <li>
                                         <a href="contact-us.html">Liên hệ</a>

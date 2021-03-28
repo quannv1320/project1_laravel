@@ -52,4 +52,5 @@ Route::prefix('product')
         Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('pro.edit');
         Route::post('/edit/{id}', [ProductController::class, 'saveEdit']);
         Route::get('/{id}/delete', [ProductController::class, 'delete'])->name('pro.delete');
+        Route::get('/detail', [ProductController::class, 'detail'])->name('pro.detail');
 });

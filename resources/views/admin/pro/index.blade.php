@@ -8,7 +8,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Sản phẩm danh mục</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Sản phẩm</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -40,7 +40,7 @@
                             <td>{{ $item->price }}</td>
                             <td>{{ $item->quantity }}</td>
                             <td>
-                                <a href="" class="btn btn-sm btn-info">Chi tiết</a>
+                                <a href="{{ route('pro.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-info">Chi tiết</a>
                                 <a href="{{ route('pro.edit', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="{{ route('pro.delete', ['id' => $item->id]) }}" class="btn btn-sm btn-danger">Xoá</a>
                             </td>

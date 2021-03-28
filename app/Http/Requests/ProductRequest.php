@@ -32,7 +32,7 @@ class ProductRequest extends FormRequest
                 Rule::unique('categories')->ignore($this->id)
             ],
             'image' => [
-                'required',
+                // 'required',
             ],
             'price' => [
                 'required',
@@ -58,7 +58,7 @@ class ProductRequest extends FormRequest
             'name.required'=>"Hãy nhập tên danh mục",
             'name.min'=>"Tên phải lớn hơn 5 ký tự",
             
-            'image.required'=>"Hãy thêm ảnh",
+            // 'image.required'=>"Hãy thêm ảnh",
 
             'price.required'=>"Hãy nhập giá",
             'price.integer'=>"Giá tiền phải là số",

@@ -15,3 +15,4 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::view('product-detail', 'clients.product-detail')->name('product-detail');
+Route::view('shop', 'clients.shop')->name('shop');

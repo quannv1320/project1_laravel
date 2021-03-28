@@ -45,6 +45,11 @@
                                     <span class="header-action-icon-item-count">3</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="" class="offcanvas-toggle">
+                                    <i class="fas fa-user"></i>
+                                </a>
+                            </li>
                         </ul> <!-- End Header Action Icon -->
                     </div>
                 </div>
@@ -64,7 +69,7 @@
                                         <a href="{{ route('homepage') }}">Trang chủ</a>
                                     </li>
                                     <li class="has-dropdown has-megaitem">
-                                        <a href="product-details-default.html">Sản phẩm <i class="fa fa-angle-down"></i></a>
+                                        <a href="{{ route('shop') }}">Sản phẩm <i class="fa fa-angle-down"></i></a>
                                         <!-- Mega Menu -->
                                         <div class="mega-menu">
                                             <ul class="mega-menu-inner">
@@ -330,44 +335,8 @@
 
         <!-- Start  Offcanvas Addcart Wrapper -->
         <div class="offcanvas-add-cart-wrapper">
-            <h4 class="offcanvas-title">Shopping Cart</h4>
+            <h4 class="offcanvas-title">Giỏ hàng</h4>
             <ul class="offcanvas-cart">
-                <li class="offcanvas-cart-item-single">
-                    <div class="offcanvas-cart-item-block">
-                        <a href="" class="offcanvas-cart-item-image-link">
-                            <img src="{{ asset('clients/assets/images/products_images/aments_products_image_6.jpg') }}" alt=""
-                                class="offcanvas-cart-image">
-                        </a>
-                        <div class="offcanvas-cart-item-content">
-                            <a href="" class="offcanvas-cart-item-link">Car Wheel</a>
-                            <div class="offcanvas-cart-item-details">
-                                <span class="offcanvas-cart-item-details-quantity">1 x </span>
-                                <span class="offcanvas-cart-item-details-price">$49.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offcanvas-cart-item-delete text-right">
-                        <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
-                    </div>
-                </li>
-                <li class="offcanvas-cart-item-single">
-                    <div class="offcanvas-cart-item-block">
-                        <a href="" class="offcanvas-cart-item-image-link">
-                            <img src="{{ asset('clients/assets/images/categories_images/aments_categories_08.jpg') }}" alt=""
-                                class="offcanvas-cart-image">
-                        </a>
-                        <div class="offcanvas-cart-item-content">
-                            <a href="" class="offcanvas-cart-item-link">Car Vails</a>
-                            <div class="offcanvas-cart-item-details">
-                                <span class="offcanvas-cart-item-details-quantity">3 x </span>
-                                <span class="offcanvas-cart-item-details-price">$500.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offcanvas-cart-item-delete text-right">
-                        <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
-                    </div>
-                </li>
                 <li class="offcanvas-cart-item-single">
                     <div class="offcanvas-cart-item-block">
                         <a href="" class="offcanvas-cart-item-image-link">
@@ -388,14 +357,13 @@
                 </li>
             </ul>
             <div class="offcanvas-cart-total-price">
-                <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+                <span class="offcanvas-cart-total-price-text">Tổng tiền:</span>
                 <span class="offcanvas-cart-total-price-value">$170.00</span>
             </div>
             <ul class="offcanvas-cart-action-button">
-                <li class="offcanvas-cart-action-button-list"><a href="" class="offcanvas-cart-action-button-link">View
-                        Cart</a></li>
+                <li class="offcanvas-cart-action-button-list"><a href="" class="offcanvas-cart-action-button-link">Chi tiết</a></li>
                 <li class="offcanvas-cart-action-button-list"><a href=""
-                        class="offcanvas-cart-action-button-link">Checkout</a></li>
+                        class="offcanvas-cart-action-button-link">Thanh toán</a></li>
             </ul>
         </div> <!-- End  Offcanvas Addcart Wrapper -->
 

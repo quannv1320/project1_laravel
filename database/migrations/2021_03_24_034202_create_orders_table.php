@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->text('address')->nullable();
             $table->text('phone')->nullable();
             $table->integer('total_price')->nullable();
+            $table->tinyInteger('status')->default(1)->comment('1:New, 2:improgress, 3:finish, 4:cancel');
             $table->timestamps();
         });
     }

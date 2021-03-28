@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
+
 
 class ProductController extends Controller
 {
@@ -22,7 +24,7 @@ class ProductController extends Controller
         return view('admin.pro.add', compact('categories', 'brands'));
     }
 
-    public function saveAdd(Request $request)
+    public function saveAdd(ProductRequest $request)
     {
         $newPro = new Product();
         $newPro->name = $request->name;

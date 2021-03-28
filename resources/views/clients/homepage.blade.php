@@ -14,7 +14,7 @@
                             <div class="row">
                                 <div class="col-10 col-md-8 col-xl-6">
                                     <h3>Q-STORE</h3>
-                                    <h2>Vợt cầu lông số 1 VN</h2>
+                                    <h2>Vợt cầu lông số 1 Việt Nam</h2>
                                     <a href="product-details-default.html" class="hero-button">Mua ngay</a>
                                 </div>
                             </div>

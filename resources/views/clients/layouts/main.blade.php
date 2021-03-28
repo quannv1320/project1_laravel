@@ -416,15 +416,14 @@
                                         class="img-fluid"></a>
                             </div>
                             <div class="footer-contact">
-                                <p>We are a team of designers and developers that create high quality Magento,
-                                    Prestashop, Opencart...</p>
+                                <p>Chúng tôi luôn đem những sản phẩm tốt nhất đến cho khách hàng</p>
                                 <div class="customer-support">
                                     <div class="customer-support-icon">
                                         <img src="{{ asset('clients/assets/images/icon/support-icon.png') }}" alt="">
                                     </div>
                                     <div class="customer-support-text">
-                                        <span>Customer Support</span>
-                                        <a class="customer-support-text-phone" href="tel:0123456789">0123456789</a>
+                                        <span>Số điện thoại hỗ trợ</span>
+                                        <a class="customer-support-text-phone" href="tel:0977290289">0977290289</a>
                                     </div>
                                 </div>
                             </div>
@@ -432,17 +431,15 @@
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-7">
                         <div class="footer-widget footer-widget-subscribe" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="footer-widget-title">Subscribe newsletter to get updated</h3>
+                            <h3 class="footer-widget-title">Đăng ký thông tin</h3>
                             <form action="#" method="post">
                                 <div class="footer-subscribe-box default-search-style d-flex">
                                     <input
                                         class="default-search-style-input-box border-around border-right-none subscribe-form"
                                         type="email" placeholder="Search entire store here ..." required>
-                                    <button class="default-search-style-input-btn" type="submit">Subscribe</button>
+                                    <button class="default-search-style-input-btn" type="submit">Gửi</button>
                                 </div>
                             </form>
-                            <p class="footer-widget-subscribe-note">We’ll never share your email address <br> with a
-                                third-party.</p>
                             <ul class="footer-social">
                                 <li><a href="" class="facebook"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="" class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -454,7 +451,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="footer-widget footer-widget-menu" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="footer-widget-title">Information</h3>
+                            <h3 class="footer-widget-title">Thông tin khác</h3>
                             <div class="footer-menu">
                                 <ul class="footer-menu-nav">
                                     <li><a href="">Delivery</a></li>
@@ -480,9 +477,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright-area">
-                            <p class="copyright-area-text">&copy; 2021 <a href="index.html">Aments</a>. Made with <i
+                            <p class="copyright-area-text">&copy; 2021 <a href="index.html">Q-STORE</a>. Custom with <i
                                     class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"
-                                    target="_blank">HasThemes</a> </p>
+                                    target="_blank">Quannv</a> </p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">

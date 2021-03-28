@@ -7,63 +7,69 @@
     <form action="" method="POST" role="form" enctype="multipart/form-data">
     @csrf
       <div class="card-body">
-        <div class="form-group">
-          <label for="exampleInputEmail1" class="font-weight-bold">Tên sản phẩm</label>
-          <input type="text" class="form-control" name="name" placeholder="Tên sản phẩm" value="{{ old('name') }}">
-            @if ($errors->has('name'))
-                <span class="text-danger">{{ $errors->first('name')}}</span>
-            @endif
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1" class="font-weight-bold">Ảnh sản phẩm</label>
-            <input type="file" class="form-control" name="image" value="{{ old('image') }}">
-              @if ($errors->has('image'))
-                  <span class="text-danger">{{ $errors->first('image')}}</span>
-              @endif
-          </div>
-          <div class="form-group">
-            <label for="inputPassword4" class="font-weight-bold">Danh mục</label>
-                <select name="cate_id" class="custom-select">
-                    @foreach ($categories as $cate)
-                        <option value="{{$cate->id}}">{{$cate->name}}</option>
-                    @endforeach
-                </select>
-          </div>
-          <div class="form-group">
-            <label for="inputPassword4" class="font-weight-bold">Thương hiệu</label>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold">Tên sản phẩm</label>
+              <input type="text" class="form-control" name="name" placeholder="Tên sản phẩm" value="{{ old('name') }}">
+                @if ($errors->has('name'))
+                    <span class="text-danger">{{ $errors->first('name')}}</span>
+                @endif
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="font-weight-bold">Ảnh sản phẩm</label>
+                <input type="file" class="form-control" name="image" value="{{ old('image') }}">
+                  @if ($errors->has('image'))
+                      <span class="text-danger">{{ $errors->first('image')}}</span>
+                  @endif
+            </div>
+            <div class="form-group">
+                <label for="inputPassword4" class="font-weight-bold">Danh mục</label>
+                  <select name="cate_id" class="custom-select">
+                      @foreach ($categories as $cate)
+                            <option value="{{$cate->id}}">{{$cate->name}}</option>
+                      @endforeach
+                  </select>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword4" class="font-weight-bold">Thương hiệu</label>
                 <select name="brand_id" class="custom-select">
                     @foreach ($brands as $brand)
                         <option value="{{$brand->id}}">{{$brand->name}}</option>
                     @endforeach
                 </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold">Giá sản phẩm</label>
+              <input type="text" class="form-control" name="price" placeholder="Giá sản phẩm" value="{{ old('price') }}">
+                @if ($errors->has('price'))
+                    <span class="text-danger">{{ $errors->first('price')}}</span>
+                @endif
+            </div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="font-weight-bold">Giá sản phẩm</label>
-            <input type="text" class="form-control" name="price" placeholder="Giá sản phẩm" value="{{ old('price') }}">
-              @if ($errors->has('price'))
-                  <span class="text-danger">{{ $errors->first('price')}}</span>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold">Số lượng</label>
+              <input type="text" class="form-control" name="quantity" placeholder="Số lượng sản phẩm" value="{{ old('quantity') }}">
+                @if ($errors->has('quantity'))
+                    <span class="text-danger">{{ $errors->first('quantity')}}</span>
+                @endif
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold">Miêu tả ngắn</label>
+              <input type="text" class="form-control" name="short_desc" placeholder="Giá sản phẩm" value="{{ old('short_desc') }}">
+                @if ($errors->has('short_desc'))
+                    <span class="text-danger">{{ $errors->first('short_desc')}}</span>
+                @endif
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2" class="font-weight-bold">Chi tiết sản phẩm</label>
+              <textarea name="detail" id="editor" rows="10" class="form-control">{{ old('detail') }}</textarea>
+              @if ($errors->has('detail'))
+                  <span class="text-danger">{{ $errors->first('detail')}}</span>
               @endif
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="font-weight-bold">Số lượng</label>
-            <input type="text" class="form-control" name="quantity" placeholder="Số lượng sản phẩm" value="{{ old('quantity') }}">
-              @if ($errors->has('quantity'))
-                  <span class="text-danger">{{ $errors->first('quantity')}}</span>
-              @endif
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="font-weight-bold">Miêu tả ngắn</label>
-            <input type="text" class="form-control" name="short_desc" placeholder="Giá sản phẩm" value="{{ old('short_desc') }}">
-              @if ($errors->has('short_desc'))
-                  <span class="text-danger">{{ $errors->first('short_desc')}}</span>
-              @endif
-          </div>
-        <div class="form-group">
-            <label for="inputAddress2" class="font-weight-bold">Chi tiết sản phẩm</label>
-            <textarea name="detail" id="editor" rows="10" class="form-control">{{ old('detail') }}</textarea>
-            @if ($errors->has('detail'))
-                <span class="text-danger">{{ $errors->first('detail')}}</span>
-            @endif
         </div>
 
       <div class="card-footer">

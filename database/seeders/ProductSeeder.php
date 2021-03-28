@@ -24,6 +24,7 @@ class ProductSeeder extends Seeder
                 'short_desc' => 'Vợt cầu lông short desc',
                 'detail' => 'Vợt cầu lông detail',
                 'quantity' => 100,
+                'view'=>10
             ],
             [
                 'name' => 'Giày Yonex 554',
@@ -34,6 +35,7 @@ class ProductSeeder extends Seeder
                 'short_desc' => 'Giày short desc',
                 'detail' => 'Giày detail',
                 'quantity' => 100,
+                'view'=>10
             ],
             [
                 'name' => 'Áo Yonex 554',
@@ -44,6 +46,7 @@ class ProductSeeder extends Seeder
                 'short_desc' => 'Áo short desc',
                 'detail' => 'Áo detail',
                 'quantity' => 100,
+                'view'=>10
             ],
             [
                 'name' => 'Balo Yonex 554',
@@ -54,6 +57,7 @@ class ProductSeeder extends Seeder
                 'short_desc' => 'Balo short desc',
                 'detail' => 'Balo detail',
                 'quantity' => 100,
+                'view'=>10
             ],
 
         ];

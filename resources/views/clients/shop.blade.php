@@ -80,32 +80,33 @@
                                     <!-- Start Grid View Product -->
                                     <div class="tab-pane active show sort-layout-single" id="layout-4-grid">
                                         <div class="row">
+                                            @foreach ($products as $item)
                                             <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                                                <!-- Start Product Defautlt Single -->
-                                                <div class="product-default-single border-around" data-aos="fade-up"
+                                                    <!-- Start Product Defautlt Single -->
+                                                    <div class="product-default-single border-around" data-aos="fade-up"
                                                     data-aos-delay="0">
-                                                    <div class="product-img-warp">
-                                                        <a href="product-details-default.html"
-                                                            class="product-default-img-link">
-                                                            <img src="assets/images/products_images/aments_products_image_1.jpg"
-                                                                alt="" class="product-default-img img-fluid">
-                                                        </a>
-                                                        <div class="product-action-icon-link">
-                                                            <ul>
-                                                                <li><a href="#"><i class="icon-shopping-cart"></i></a></li>
-                                                            </ul>
+                                                        <div class="product-img-warp">
+                                                            <a href="product-details-default.html"
+                                                                class="product-default-img-link">
+                                                                <img src="{{ asset($item->image) }}"
+                                                                    alt="" class="product-default-img img-fluid">
+                                                            </a>
+                                                            <div class="product-action-icon-link">
+                                                                <ul>
+                                                                    <li><a href="#"><i class="icon-shopping-cart"></i></a></li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="product-default-content">
-                                                        <h6 class="product-default-link"><a
-                                                                href="product-details-default.html">New Balance
-                                                                Fresh Foam Kaymin Car Purts</a></h6>
-                                                        <span class="product-default-price"><del
-                                                                class="product-default-price-off">$30.12</del>
-                                                            $25.12</span>
-                                                    </div>
-                                                </div> <!-- End Product Defautlt Single -->
-                                            </div>                                    
+                                                        <div class="product-default-content">
+                                                            <h6 class="product-default-link"><a
+                                                                    href="product-details-default.html">{{ $item->name }}</a></h6>
+                                                            <span class="product-default-price"><del
+                                                                    class="product-default-price-off"></del>
+                                                                    {{ number_format($item->price) }} VNĐ</span>
+                                                        </div>
+                                                    </div> <!-- End Product Defautlt Single -->
+                                            </div>
+                                            @endforeach                                 
                                         </div>
                                     </div> <!-- End Grid View Product -->
                                 </div>

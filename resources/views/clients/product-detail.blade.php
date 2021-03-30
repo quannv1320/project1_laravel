@@ -32,22 +32,7 @@
                         <div class="product-details-gallery-area" data-aos="fade-up" data-aos-delay="0">
                             <div class="product-large-image product-large-image-horaizontal">
                                 <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_1.jpg') }}" alt="">
-                                </div>
-                                <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_2.jpg') }}" alt="">
-                                </div>
-                                <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_3.jpg') }}" alt="">
-                                </div>
-                                <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_4.jpg') }}" alt="">
-                                </div>
-                                <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_5.jpg') }}" alt="">
-                                </div>
-                                <div class="product-image-large-single zoom-image-hover">
-                                    <img src="{{  asset('clients/assets/images/products_images/aments_products_large_image_6.jpg') }}" alt="">
+                                    <img src="{{  asset( $product->image ) }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -56,8 +41,8 @@
                         <div class="product-details-content-area" data-aos="fade-up" data-aos-delay="200">
                             <!-- Start  Product Details Text Area-->
                             <div class="product-details-text">
-                                <h4 class="title">Vợt cầu lông ProKennex Thunder 7002</h4>
-                                <h6 class="product-ref mb-20">Thương hiệu: <span>ProKennex</span></h6>
+                                <h4 class="title">{{ $product->name }}</h4>
+                                <h6 class="product-ref mb-20">Thương hiệu: <span>{{ $product->brand->name }}</span></h6>
                                 <div class="d-flex align-items-center">
                                     <div class="product-review">
                                         <span class="review-fill"><i class="fa fa-star"></i></span>
@@ -66,12 +51,9 @@
                                         <span class="review-fill"><i class="fa fa-star"></i></span>
                                         <span class="review-empty"><i class="fa fa-star"></i></span>
                                     </div>
-                                    <a href="" class="customer-review">(customer review )</a>
                                 </div>
-                                <div class="price"><del>$70.00</del>$80.00</div>
-                                <p>Vợt cầu lông CHUYÊN CÔNG ProKennex Thunder 7002 được thiết kế với hai màu 
-                                    khá bắt mắt cho bạn lựa chọn đó là: Đỏ và xanh lá. Hai màu này vô cùng ấn 
-                                    tượng dành cho các lông thủ trải nghiệm</p>
+                                <div class="price"><del></del>{{ number_format($product->price) }} VNĐ</div>
+                                <p>{{ $product->short_desc }}</p>
                             </div> <!-- End  Product Details Text Area-->
                             <!-- Start Product Variable Area -->
                             <div class="product-details-variable"> 
@@ -121,18 +103,7 @@
                                     <!-- Start Product Details Tab Content Singel -->
                                     <div class="tab-pane active show" id="description">
                                         <div class="single-tab-content-item">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
-                                                nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
-                                                ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
-                                                adipiscing cursus eu, suscipit id nulla. </p>
-                                            <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem,
-                                                quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies
-                                                massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero
-                                                hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet,
-                                                consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus
-                                                nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus,
-                                                consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in
-                                                imperdiet ligula euismod eget</p>
+                                            {!! $product->detail !!}
                                         </div>
                                     </div> <!-- End Product Details Tab Content Singel -->
                                     <!-- Start Product Details Tab Content Singel -->

@@ -37,7 +37,7 @@
                             <td>
                                 <img src="{{ asset($item->brand->logo) }}" width="70">
                             </td>
-                            <td>{{ $item->price }}</td>
+                            <td style="color: red">{{ number_format($item->price) }} VNĐ</td>
                             <td>{{ $item->quantity }}</td>
                             <td>
                                 <a href="{{ route('pro.detail', ['id' => $item->id]) }}" class="btn btn-sm btn-info">Chi tiết</a>

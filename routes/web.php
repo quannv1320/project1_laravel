@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
 
 // 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
@@ -10,9 +12,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 
 
 
-Route::get('/', function () {
-    return view('clients.homepage');
-})->name('homepage');
+Route::get('/', [HomeController::class, 'homepage'])->name('homepage');
+Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 
-Route::view('product-detail', 'clients.product-detail')->name('product-detail');
-Route::view('shop', 'clients.shop')->name('shop');
+Route::get('/product-detail/{id}', [HomeController::class, 'productDetail'])->name('product-detail');

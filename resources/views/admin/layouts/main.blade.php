@@ -52,9 +52,23 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('brand.index') }}">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Thương hiệu</span></a>
+                    <span>Quản lý thương hiệu</span></a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('brand.index') }}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Quản lý bình luận</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('brand.index') }}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Quản lý đơn hàng</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('brand.index') }}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Quản lý tài khoản</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">

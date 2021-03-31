@@ -79,6 +79,7 @@ class ProductController extends Controller
     public function detail($id)
     {
         $product = Product::find($id);
+        
         return view('admin.pro.detail', compact('product'));
     }
 

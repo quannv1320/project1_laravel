@@ -22,7 +22,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.index') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-rocket"></i>
                 </div>
@@ -78,32 +78,11 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('homepage') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Homepage</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -186,6 +165,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <img class="img-profile rounded-circle" src="{{ asset('admin/img/undraw_profile.svg') }}">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -203,7 +183,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{ route('logout') }}">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -245,27 +225,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
     <script src="/path-to-your-tinymce/tinymce.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/48xa0hxd3011nbpxpx1784jn23e1726gwfbnu92cgevevt2b/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     @yield('page-script')

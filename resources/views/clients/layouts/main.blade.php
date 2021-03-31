@@ -46,9 +46,16 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="offcanvas-toggle">
-                                    <i class="fas fa-user"></i>
-                                </a>
+                                
+                                @auth
+                                    <a href="{{ route('admin.index') }}"><i class="fas fa-user"></i></a>
+                                @endauth
+
+                                @guest
+                                    <li>
+                                        <a href="{{ route('login') }}">Login</a>
+                                    </li>
+                                @endguest
                             </li>
                         </ul> <!-- End Header Action Icon -->
                     </div>

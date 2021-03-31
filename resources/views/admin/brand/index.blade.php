@@ -33,7 +33,9 @@
                             <td>
                                 <img src="{{ asset($item->logo)}}" width="100px">
                             </td>
-                            <td></td>
+                            <td>
+                                {{ count($item->product) }}
+                            </td>
                             <td>{{ $item->description }}</td>
                             <td>
                                 <a href="{{ route('brand.edit', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">Sửa</a>

@@ -18,6 +18,7 @@
                             <th>ID</th>
                             <th>Tên danh mục</th>
                             <th>Miêu tả</th>
+                            <th>Số lượng sản phẩm</th>
                             <th>
                                 <a href="{{ route('cate.add') }}" class="btn btn-sm btn-success">Thêm mới</a>
                             </th>
@@ -29,6 +30,7 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->description }}</td>
+                            <td>{{ count($item->product) }}</td>
                             <td>
                                 <a href="{{ route('cate.edit', ['id' => $item->id]) }}" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="{{ route('cate.delete', ['id' => $item->id]) }}" class="btn btn-sm btn-danger">Xoá</a>

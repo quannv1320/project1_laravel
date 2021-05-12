@@ -67,6 +67,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('brand.index') }}">
                     <i class="fas fa-fw fa-cog"></i>
+                    <span>Quản lý bài viết</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('brand.index') }}">
+                    <i class="fas fa-fw fa-cog"></i>
                     <span>Quản lý tài khoản</span></a>
             </li>
 
